@@ -19,7 +19,7 @@ class DoublyLinkedList<T> {
     this.tail = null;
   }
 
-  add(value: T): void {
+  add(value: T, position?: number): void {
     const newNode = new LNode(value);
 
     if (!this.head) {
