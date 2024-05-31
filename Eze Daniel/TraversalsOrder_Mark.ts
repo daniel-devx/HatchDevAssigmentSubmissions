@@ -35,10 +35,9 @@ class BinaryTree<T> {
     if (!node) return [];
 
     let output: T[] = [];
-
+    output.push(...this.postOrder(node!.left));
+    output.push(...this.postOrder(node!.right));
     output.push(node?.value!);
-    output.push(...this.preOrder(node!.left));
-    output.push(...this.preOrder(node!.right));
     return output;
   }
 }
